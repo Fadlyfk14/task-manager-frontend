@@ -1,0 +1,39 @@
+* {
+body { font-family: 'Poppins', sans-serif; }
+
+/* Sidebar gradient */
+#sidebar {
+  background: linear-gradient(180deg, #064e3b, #022c22);
+}
+
+/* Glass effect card */
+.card {
+  backdrop-filter: blur(10px);
+  transition: all .3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* Status */
+.status {
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.status-active {
+  background: linear-gradient(135deg,#bbf7d0,#4ade80);
+  color:#065f46;
+}
+
+/* Table */
+thead {
+  background: linear-gradient(90deg,#16a34a,#22c55e);
+  color:white;
+}
+tbody tr:hover {
+  background:#f0fdf4;
+}
+}

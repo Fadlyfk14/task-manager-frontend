@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="/TEMPLATE/template/css/tailwind/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="../js/config.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- TITLE -->
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div>
+    </div>
+
+    <div class="form-container">
+      <div class="form-inner">
+
+        <!-- ================= LOGIN ================= -->
+        <form class="login" id="form-login">
+          <div class="field">
+            <input type="text" id="login-username" placeholder="Username" required />
+          </div>
+
+          <div class="field">
+            <input type="password" id="login-password" placeholder="Password" required />
+          </div>
+
+          <div class="field btn">
+            <input type="submit" value="Login" />
+          </div>
+
+          <div class="signup-link">
+            Not registered? <a href="#" id="to-signup">Create account</a>
+          </div>
+        </form>
+
+        <!-- ================= SIGNUP ================= -->
+        <form class="signup" id="form-signup">
+          <div class="field">
+            <input type="text" id="signup-username" placeholder="Username" required />
+          </div>
+
+          <div class="field">
+            <input type="password" id="signup-password" placeholder="Password" required />
+          </div>
+
+          <div class="field btn">
+            <input type="submit" value="Create Account" />
+          </div>
+
+          <div class="signup-link">
+            Already have account? <a href="#" id="to-login">Login</a>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="../js/login.js"></script>
+  <script src="../js/signup.js"></script>
+
+  <!-- SLIDE LOGIC -->
+  <script>
+    const formInner = document.querySelector(".form-inner");
+    const toSignup = document.getElementById("to-signup");
+    const toLogin = document.getElementById("to-login");
+
+    toSignup.onclick = e => {
+      e.preventDefault();
+      formInner.style.marginLeft = "-100%";
+    };
+
+    toLogin.onclick = e => {
+      e.preventDefault();
+      formInner.style.marginLeft = "0%";
+    };
+  </script>
+</body>
+</html>

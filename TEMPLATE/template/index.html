@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-[Poppins]">
+
+<div class="flex min-h-screen">
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="w-64 bg-gray-900 text-white hidden md:flex flex-col">
+  <div class="p-6 text-center text-xl font-bold border-b border-white/10">
+    To Do List Task
+  </div>
+
+  <nav class="flex-1 p-4 space-y-2">
+    <a class="block px-4 py-3 rounded-xl bg-green-600 font-medium">
+      📊 Dashboard
+    </a>
+    <a href="insert.html" class="block px-4 py-3 rounded-xl hover:bg-white/10">
+      ➕ Insert Task
+    </a>
+  </nav>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<div class="flex-1 flex flex-col">
+
+<!-- ================= TOPBAR ================= -->
+<header class="bg-white shadow sticky top-0 z-10">
+  <div class="flex justify-between items-center px-6 py-4">
+    <h1 class="text-xl font-semibold text-gray-800">
+      Dashboard Task
+    </h1>
+
+    <button
+      id="btn-logout"
+      class="text-sm bg-red-500 text-white px-4 py-1.5 rounded-lg hover:bg-red-600">
+      Logout
+    </button>
+  </div>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<main class="p-8 space-y-8">
+
+<!-- ================= STATISTIC CARD ================= -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-6">
+
+  <div class="bg-white rounded-2xl p-6 shadow">
+    <p class="text-gray-500 text-sm">Total Task</p>
+    <h2 class="text-4xl font-bold text-gray-800 mt-2" id="total">0</h2>
+  </div>
+
+  <div class="bg-white rounded-2xl p-6 shadow">
+    <p class="text-gray-500 text-sm">Pending</p>
+    <h2 class="text-4xl font-bold text-gray-500 mt-2" id="count-todo">0</h2>
+  </div>
+
+  <div class="bg-white rounded-2xl p-6 shadow">
+    <p class="text-gray-500 text-sm">Progress</p>
+    <h2 class="text-4xl font-bold text-blue-500 mt-2" id="count-progress">0</h2>
+  </div>
+
+  <div class="bg-white rounded-2xl p-6 shadow">
+    <p class="text-gray-500 text-sm">Done</p>
+    <h2 class="text-4xl font-bold text-green-600 mt-2" id="count-done">0</h2>
+  </div>
+
+  <!-- DEADLINE TERDEKAT -->
+  <div class="bg-yellow-50 rounded-2xl p-6 shadow">
+    <p class="text-yellow-700 text-sm">Deadline Terdekat</p>
+    <h2 class="text-4xl font-bold text-yellow-600 mt-2" id="count-soon">0</h2>
+  </div>
+
+  <!-- DEADLINE TERLEWAT -->
+  <div class="bg-red-50 rounded-2xl p-6 shadow">
+    <p class="text-red-700 text-sm">Deadline Terlewat</p>
+    <h2 class="text-4xl font-bold text-red-600 mt-2" id="count-overdue">0</h2>
+  </div>
+
+</div>
+
+<!-- ================= SEARCH & FILTER ================= -->
+<div class="bg-white rounded-2xl shadow p-4 flex flex-wrap items-center gap-3">
+  <input
+    type="text"
+    id="searchTask"
+    placeholder="Cari task..."
+    class="border rounded-lg px-4 py-2 text-sm w-60 focus:ring focus:ring-green-200"
+  />
+
+  <select
+    id="filterStatus"
+    class="border rounded-lg px-4 py-2 text-sm focus:ring focus:ring-green-200"
+  >
+    <option value="">Semua Status</option>
+    <option value="todo">Pending</option>
+    <option value="progress">Progress</option>
+    <option value="done">Done</option>
+  </select>
+</div>
+
+<!-- ================= TABLE ================= -->
+<div class="bg-white rounded-2xl shadow overflow-hidden">
+
+<table class="w-full text-sm">
+  <thead class="bg-gray-200 text-gray-600">
+    <tr>
+      <th class="px-4 py-3 text-center">No</th>
+      <th class="px-4 py-3 text-center">Title</th>
+      <th class="px-4 py-3 text-center">Description</th>
+      <th class="px-4 py-3 text-center">Deadline</th>
+      <th class="px-4 py-3 text-center">Status</th>
+      <th class="px-4 py-3 text-center">Aksi</th>
+    </tr>
+  </thead>
+
+  <tbody id="tbody-task" class="divide-y">
+    <tr>
+      <td colspan="6" class="text-center py-6 text-gray-400">
+        Loading data...
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</main>
+</div>
+</div>
+
+<!-- ================= JS ================= -->
+<script src="../js/config.js"></script>
+<script src="../js/tabel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Insert Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/TEMPLATE/template/css/tailwind/index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-[Poppins]">
+
+<div class="max-w-xl mx-auto mt-10 bg-white p-6 rounded-2xl shadow">
+
+  <h2 class="text-xl font-semibold mb-6">➕ Insert Task</h2>
+
+  <form id="form-insert" class="space-y-4">
+
+    <div>
+      <label class="text-sm">Title</label>
+      <input id="title" type="text" class="w-full border rounded-lg px-3 py-2" required>
+    </div>
+
+    <div>
+      <label class="text-sm">Description</label>
+      <textarea id="description" class="w-full border rounded-lg px-3 py-2"></textarea>
+    </div>
+
+    <div>
+      <label class="text-sm">Deadline</label>
+      <input id="deadline" type="date" class="w-full border rounded-lg px-3 py-2">
+    </div>
+
+    <div>
+      <label class="text-sm">Status</label>
+      <select id="status" class="w-full border rounded-lg px-3 py-2">
+        <option value="todo">Pending</option>
+        <option value="progress">Progress</option>
+        <option value="done">Done</option>
+      </select>
+    </div>
+
+    <div class="flex justify-end gap-2 pt-4">
+      <button type="button" id="btn-cancel"
+        class="px-4 py-2 bg-gray-300 rounded-lg">
+        Batal
+      </button>
+
+      <button type="submit"
+        class="px-4 py-2 bg-green-600 text-white rounded-lg">
+        Simpan
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<!-- WAJIB DI BAWAH -->
+<script src="../js/config.js"></script>
+<script src="../js/insert.js"></script>
+</body>
+</html>
