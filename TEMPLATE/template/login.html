@@ -5,16 +5,15 @@
   <title>Login | Task Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="/TEMPLATE/template/css/tailwind/login.css" />
+  <link rel="stylesheet" href="css/tailwind/login.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <script src="../js/config.js"></script>
+  <script src="js/config.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
 
-    <!-- TITLE -->
     <div class="title-text">
       <div class="title login">Login</div>
       <div class="title signup">Signup</div>
@@ -23,7 +22,6 @@
     <div class="form-container">
       <div class="form-inner">
 
-        <!-- ================= LOGIN ================= -->
         <form class="login" id="form-login">
           <div class="field">
             <input type="text" id="login-username" placeholder="Username" required />
@@ -42,7 +40,6 @@
           </div>
         </form>
 
-        <!-- ================= SIGNUP ================= -->
         <form class="signup" id="form-signup">
           <div class="field">
             <input type="text" id="signup-username" placeholder="Username" required />
@@ -65,11 +62,9 @@
     </div>
   </div>
 
-  <!-- JS -->
-  <script src="../js/login.js"></script>
-  <script src="../js/signup.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/signup.js"></script>
 
-  <!-- SLIDE LOGIC -->
   <script>
     const formInner = document.querySelector(".form-inner");
     const toSignup = document.getElementById("to-signup");
